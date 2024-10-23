@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #def0fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#container {
+  height: 600px;
+  width: 600px;
+  border: 2px solid black;
+  background-color: #fffbf0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  border: 1px solid black;
+  width: calc(100% / 16);
+  height: calc(100% / 16);
+}
+
+.grid-item:hover {
+  background-color: black;
+}
