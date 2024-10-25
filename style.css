@@ -29,10 +29,16 @@ body {
 
 .grid-item {
   border: 1px solid black;
-  width: calc(100% / 16);
-  height: calc(100% / 16);
 }
 
 .grid-item:hover {
   background-color: black;
+}
+
+#grid-size {
+  color: #4272ef;
+  background-color: #fff;
+  border: 1px solid #4272ef;
+  margin-top: 1em;
+  padding: 10px 15px;
 }

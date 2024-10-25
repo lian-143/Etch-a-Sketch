@@ -1,21 +1,29 @@
 const container = document.getElementById("container");
-const gridItems = document.getElementsByClassName("grid-item");
-console.log(gridItems);
+const gridSizeBtn = document.getElementById("grid-size");
 
-function grid(rows, column) {
-  // creating grid
-  for (let i = 0; i < rows * column; i++) {
-    let gridCreate = document.createElement("div");
-    container.appendChild(gridCreate).className = "grid-item";
-  }
+gridSizeBtn.addEventListener("click", getUserInput);
+
+function getUserInput() {
+  let userInput = prompt("Enter the grid size from 1-100: ");
+
+  container.innerHTML = "";
+  createGrid(userInput, userInput);
 }
 
-grid(16, 16);
+function createGrid(rows, columns) {
+  let divSize = 100 / rows;
+  console.log(divSize);
 
-for (let i = 0; i < gridItems.length; i++) {
-  gridItems[i].addEventListener("mousedown", function (event) {
-    if (event.button === 0) {
-      gridItems[i].style.backgroundColor = "black";
-    }
-  });
+  for (let i = 0; i < rows * columns; i++) {
+    let divGrid = document.createElement("div");
+    container.appendChild(divGrid);
+    divGrid.className = "grid-item";
+
+    divGrid.style.height = `${divSize}%`;
+    divGrid.style.width = `${divSize}%`;
+
+    divGrid.addEventListener("mouseenter", function () {
+      divGrid.style.background = "black";
+    });
+  }
 }
