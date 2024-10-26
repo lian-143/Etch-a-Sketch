@@ -14,14 +14,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
 }
 
 #container {
   height: 600px;
   width: 600px;
-  border: 2px solid black;
+  border: 4px solid black;
   background-color: #fffbf0;
   display: flex;
   flex-wrap: wrap;
@@ -35,10 +34,14 @@ body {
   background-color: black;
 }
 
-#grid-size {
+.btn {
   color: #4272ef;
   background-color: #fff;
   border: 1px solid #4272ef;
   margin-top: 1em;
   padding: 10px 15px;
+}
+
+.btn:hover {
+  filter: brightness(85%);
 }
