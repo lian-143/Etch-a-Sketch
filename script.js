@@ -7,6 +7,8 @@ const eraseBtn = document.getElementById("erase");
 const clearBtn = document.getElementById("clear");
 let currentMode = "black";
 
+createGrid(16, 16);
+
 gridSizeBtn.addEventListener("click", getUserInput);
 blackBtn.addEventListener("click", () => setMode("black"));
 rainbowBtn.addEventListener("click", () => setMode("rainbow"));
@@ -55,6 +57,7 @@ function colorMode(divGrid) {
     divGrid.style.opacity = currentOpacity;
   } else if (currentMode === "erase") {
     divGrid.style.background = "";
+    divGrid.style.opacity = "";
   }
 }
 

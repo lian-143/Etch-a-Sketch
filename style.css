@@ -11,10 +11,20 @@ body {
 
 body {
   background-color: #def0fd;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  margin: 0.75em 0;
+  font-size: 2.81rem;
+  margin-left: 2.5em;
+}
+
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 #container {
@@ -28,6 +38,19 @@ body {
 
 .grid-item {
   border: 1px solid black;
+}
+
+.settings {
+  background-color: #fff;
+  margin: 0 1.6em 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1em;
+  border: 2px solid #4272ef;
+}
+
+.heading-settings {
+  color: #4272ef;
 }
 
 .btn {
