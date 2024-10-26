@@ -30,10 +30,6 @@ body {
   border: 1px solid black;
 }
 
-.grid-item:hover {
-  background-color: black;
-}
-
 .btn {
   color: #4272ef;
   background-color: #fff;
